@@ -1,16 +1,8 @@
-# This is a sample Python script.
+import pandas as pd
+from sklearn.model_selection import train_test_split
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# Load the dataset into a Pandas DataFrame
+df = pd.read_csv('spambase_data.csv', header=None)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
