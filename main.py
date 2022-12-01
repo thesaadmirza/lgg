@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from src.functions import lgg
+from src.functions import lgg, lgcg, conjunction, internal_disjunction
 
 # Load the dataset into a Pandas DataFrame
 df = pd.read_csv('spambase_data.csv', header=None)
@@ -17,8 +17,9 @@ X_train, X_test, y_train, y_test = train_test_split(df.drop(columns=label_column
 concept_main = list(X_train.iloc[0].dropna().items())
 
 for index, row in X_train.iloc[1:].iterrows():
-    concept_main = lgg(concept_main, list(row.dropna().items()))
+    concept_main = conjunction(concept_main, list(row.dropna().items()))
 
+print(concept_main)
 y_pred = []
 for index, row in X_test.iterrows():
     concept = list(row.dropna().items())
