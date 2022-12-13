@@ -43,3 +43,7 @@ def train_predict_accuracy_finder(algo=1):
 
 accuracy = train_predict_accuracy_finder(1)
 print("Accuracy LGG:", accuracy)
+accuracy = train_predict_accuracy_finder(2)
+print("Accuracy Conjunction:", accuracy)
+accuracy = train_predict_accuracy_finder(3)
+print("Accuracy Conjunction ( Internal Disjunction ):", accuracy)
